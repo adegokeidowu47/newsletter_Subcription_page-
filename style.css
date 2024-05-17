@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+/*======== Reusable CSS Color ============*/
+:root{
+  --tomato: hsl(4, 100%, 67%);
+  --bg-white: hsl(0, 0%, 100%);
+  --bg-grey: hsl(231, 7%, 60%);
+  --charcoalgrey: hsl(235, 18%, 26%);
+  --bg-darkgrey: hsl(234, 29%, 20%);
+}
+
+.container,.content_container, #feedback_container{
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
+}
+.container,.content_container{
+  align-items: center;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background: var(--bg-darkgrey);
+}
+
+.content_container{
+    max-width: 80%;
+    height: auto;
+    background: var(--bg-white);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+main {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 15px;
+}
+
+p,li,#feedback_container{
+    margin: 10px;
+}
+
+p,li{
+    font-size: 16px;
+    color:var(--bg-darkgrey);
+}
+h1{
+    font-size: 2.8em;
+    font-weight: 700;  
+    margin: 30px 0 20px 10px;
+}
+aside picture img{
+    display: inline-flex;
+    width: 100%;
+    height: 450PX;
+    margin-right: 5px;
+}
+
+ul li{
+    list-style: none;
+}
+ul li img {
+    max-width: 15px;
+    height: auto;
+}
+form,label{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+}
+
+form label span{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  margin-top: 30px;
+}
+
+form label span, button{
+  font-weight: 400;
+}
+form label input{
+    cursor: pointer;
+    max-width: 100%;
+    height: 55px;
+    padding: 15px;
+    margin-top: 10px;
+    font-size: 18px;
+    outline: none;
+    border-radius: 8px;
+    border: 1px solid rgb(0, 0, 0, 0.3);
+}
+#user_email.error{
+  border-color: var(--tomato);
+  caret-color: var(--tomato);
+  background: hsla(4,81.6%,92.7%,0.862);
+}
+#user_email.success{
+  border-color: green;
+  caret-color: green;
+}
+
+form label input:focus{
+    border: 1px solid rgb(0, 0, 0, 0.7);
+}
+form label input::placeholder{
+    font-size: 18px;
+}
+
+button{
+    max-width: 100%;
+    height: 50px;
+    margin: 15px 0 0 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    color: #fff;
+    background: hsl(235, 18%, 26%);
+    font-weight: 400;
+}
+button:hover{
+    cursor: pointer;
+    background-image: linear-gradient(45deg,hsl(4, 100%, 67%) 50%, rgba(255,155,10));
+}
+
+
+/*======= Styling for feedback Message ======*/
+#feedback_container{
+  max-width: 450px;
+  height: auto;
+  background: var(--bg-white);
+  padding: 50px 20px 0 20px;
+  border-radius: 15px;
+  flex-direction: column;
+  gap: 25px;
+}
+#feedback_container img{
+  width: 70px;
+  height: 70px;
+}
+#feedback_container #thanks_heading{
+  font-size: 3em;
+  margin-bottom: 50px;
+}
+#feedback_container p{
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+#feedback_container button{
+  width: 100%;
+  height: 60px;
+  font-size: 16px;
+}
+
+
+@media screen and (max-width: 750px){
+  
+  .container{
+    background: var(--bg-darkgrey);
+  }
+  
+ .content_container{
+    max-width: 100%;
+    height: auto;
+    padding: 0 0 20px;
+    flex-direction: column-reverse;
+  }
+  p,li{
+    font-size: 14px;
+  }
+  h1{
+    font-size: 2.5em;
+    margin: 20px 0 40px 10px;
+  }
+   aside picture img{
+     width: 100%;
+     height: auto;
+     margin-right: 0px;
+   }
+   #feedback_container{
+    max-width: 450px;
+    height: auto;
+   }
+   #feedback_container #thanks_heading{
+  font-size: 2.5em;
+  margin-bottom: 15px;
+   }
+   #feedback_container p{
+    font-size: 15px;
+    margin-bottom: 100px;
+   }
+}
+
+
+
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="font-family" href="https://fonts.google.com/specimen/Roboto"/>
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+<body>
+  <div class="container">
+    <div class="content_container">
+      <main>
+        <h1>  Stay updated!</h1>
+        <p>  Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul class="lists">
+          <li><img src="icon-list.svg"/>  Product discovery and building what matters</li>
+          <li><img src="icon-list.svg" >  Measuring to ensure updates are a success</li>
+          <li><img src="icon-list.svg" />  And much more!</li>
+        </ul>
+        <form action="#" method="POST">
+          <label for="email"> <span>
+            <div>Email address</div>
+             <div id="warningMsg"></div>
+            </span>
+            <input type="email" name="email" id="user_email"
+            placeholder="email@company.com">
+          </label>
+          <button type="submit">Subscribe to monthly newsletter</button>
+        </form>
+      </main>
+      <aside>
+        <picture class="image">
+          <source media="(max-width: 800px)" srcset="illustration-sign-up-mobile.svg">
+          <img src="illustration-sign-up-desktop.svg" alt="product_image">
+        </picture>
+      </aside>
+    </div>
+  </div>
+  
+    <script src="script.js"></script>
+</body>
+</html>
